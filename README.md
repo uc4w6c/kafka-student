@@ -36,3 +36,13 @@ consumer
 $ $KAFKA_HOME/bin/kafka-console-consumer.sh --bootstrap-server=`broker-list.sh` --topic=test --from-beginning
 この状態でproducerでコマンド入力すると
 consumer側に送信されてくる
+
+
+------------------------------------------------------------------------------------------------------------------
+java
+送信する
+$ java -cp build/libs/javaapi-1.0-SNAPSHOT-all.jar com.example.chapter4.FirstAppProducer
+
+受信する
+$ java -cp build/libs/javaapi-1.0-SNAPSHOT-all.jar com.example.chapter4.FirstAppConsumer
+
