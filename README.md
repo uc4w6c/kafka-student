@@ -1,3 +1,8 @@
+kafka勉強用
+参考URL
+https://qiita.com/cohhei/items/fa254fa64cf88ab5f588
+https://qiita.com/psyashes/items/e50bdfe35a2e7778986d
+
 ローカル
 $ ifconfig
 確認したIPをdocker-compose.ymlに書き換え
@@ -16,7 +21,7 @@ kafka client
 $ $KAFKA_HOME/bin/kafka-topics.sh --create --topic test --partitions 4 --zookeeper $ZK --replication-factor 1
 この場合は testというトピック名でTopicを作成
 
-$ $KAFKA_HOME/bin/kafka-console-producer.sh --topic=test --broker-list=`broker-list.sh`
+$ $KAFKA_HOME/bin/kafka-topics.sh --describe --topic test --zookeeper $ZK
 これでトピックが作成されたか確認
 
 producer(kafka clientと同じホスト上)
